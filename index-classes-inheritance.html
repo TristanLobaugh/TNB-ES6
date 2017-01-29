@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ES6 Classes & Inheritance</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+"use strict";
+
+class Person{
+
+	constructor(name, age, weight){
+		this.name = name;
+		this.age =  age;
+		this.weight = weight;
+	}
+	displayName(){
+		console.log(this.name);
+	}
+	displayAge(){
+		console.log(this.age);
+	}
+	displayWeight(){
+		console.log(this.weight);
+	}
+}
+
+class Programmer extends Person{
+
+	constructor(name, age, weight, language){
+		super(name, age, weight);
+		this.language = language;
+	}
+		displayLanguage(){
+		console.log(this.language);
+	}
+}
+
+let tristan = new Programmer("Tristan", 40, 185, "Javascript");
+let mc = new Person("Mary Courtney", 35, 110);
+
+tristan.displayName();
+tristan.displayAge();
+tristan.displayWeight();
+tristan.displayLanguage();
+console.log("---------------")
+
+mc.displayName();
+mc.displayAge();
+mc.displayWeight();
+
+</script>
+
+</body>
+</html>

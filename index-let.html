@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ES6 let</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+"use strict";
+
+let movie = "Batman";
+
+function theNotebook(){
+	let movie = "The Notebook";
+	return movie;
+}		
+
+function myFunction(){
+	let isHorse = true;
+	let saying = "bacon is good";
+	console.log("\nBefore if:", saying);
+
+	if(isHorse){
+		let saying = "I am a horse";
+		console.log("\nInside if:", saying);
+	}
+	console.log("After if:", saying);
+}
+
+
+console.log(movie);
+console.log(theNotebook());
+console.log(movie);
+myFunction();
+
+
+</script>
+
+</body>
+</html>

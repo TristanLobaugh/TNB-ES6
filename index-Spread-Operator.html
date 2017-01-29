@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ES6 Template Spread Operator</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+"use strict";
+
+let addNumbers = (a, b, c) => {
+	console.log(a + b + c);
+}
+
+let nums = [3, 4, 5];
+addNumbers(nums[0], nums[1], nums[2]);
+addNumbers(...nums);
+
+let meats = ["bacon", "ham"];
+let food = ["apples", ...meats, "kiwi", "rice"];
+
+console.log(food);
+
+</script>
+
+</body>
+</html>

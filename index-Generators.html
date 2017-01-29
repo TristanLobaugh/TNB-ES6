@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ES6 Generators</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+"use strict";
+
+function* sampleGenerator(){
+	yield "apples";
+	yield "bacon";
+	console.log("This is the line after bacon....");
+	yield "tomato";
+}
+
+let sample = sampleGenerator();
+console.log(sample.next().value);
+console.log(sample.next().value);
+console.log(sample.next().value);
+
+console.log("-----------------")
+
+function* getNextId(){
+	let id = 0;
+	while(id < 3){
+		yield id++;
+	}
+} 
+
+let creatueUser = getNextId();
+
+console.log(creatueUser.next().value);
+console.log(creatueUser.next().value);
+console.log("do something else");
+console.log(creatueUser.next().value);
+
+</script>
+
+</body>
+</html>
